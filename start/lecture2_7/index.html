@@ -19,11 +19,40 @@
 
 <body>
   <script>
-    const npcs = [];
-    
+    const npcs = []; //array das personagens
+
+    //criar 3 personagens
+    /*
     npcs.push(createNPC());
     npcs.push(createNPC());
     npcs.push(createNPC());
+    */
+    //criar um loop para automatizar a criação das personagens
+    for(let i=0; i < 10; i++){
+      npcs.push(createNPC());
+    }
+
+    // While Loop
+    let i = 0;
+    while(i < 2 ){
+      npcs.push(createNPC());
+      i++
+    }
+
+    //For-in-object Loop
+    const npc = npcs[0]; //identifica a personagem
+    console.log("npcs[0] tem as seguintes propriedades:");
+    for(let prop in npc){
+      console.log(prop + ":" + npc[prop]);
+    }
+
+    //For-each
+    i = 0;
+    npcs.forEach(npc => {
+      console.log("NPC nr." + i + " uses a " + npc.weapon + ' as its chosen weapon.');
+      i++;
+    });
+   
     
     function createNPC(){
       const weapons = ["sword", "pistol", "axe", "spear"];
