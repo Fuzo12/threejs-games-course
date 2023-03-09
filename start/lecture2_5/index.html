@@ -26,6 +26,18 @@
 <body>
    <script>
      //Place your code here
+     const planets = ["Mercury", "Venus", "Earth", "Jupiter", "Saturn", "Urano", "Pluto"];
+     planets.push("Neptune", "Mars"); //adiciona ao array
+     
+     console.log('There are ' + planets.length + ' planets in the solar System');
+     const mars = planets.pop(); //retira o ultimo elemento do array
+
+     function month(){//função que retorna o Mes
+      const months = ["Janeiro", "Fev", "Mar", "Abr", "Maio", "Jun", "Jul", "Ago", "Out", "Set", "Nov", "Dez"];
+      const a = new Date().getMonth();
+      return months[a];
+     }
+
    </script> 
 </body>
 
