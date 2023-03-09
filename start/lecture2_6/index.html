@@ -20,6 +20,21 @@
 <body>
   <script>
     //Place your code here
+    const npcs = []; //array que recebe todas as personagens
+      // criar 3 personagens
+      npcs.push(createNPC()); //cria e coloca uma personagem no array
+      npcs.push(createNPC()); //cria e coloca uma personagem no array
+      npcs.push(createNPC()); //cria e coloca uma personagem no array
+      
+    function createNPC(){ //cria a personagem
+      const power = Math.random() * 0.5 + 0.5 // numeros entre 0.5 e 1
+      const weapons = ["sword", "pistol", "axe", "spear"];
+      const weapon = weapons[Math.floor(Math.random() * weapons.length)]; // Math.floor devolve um numero inteiro de um valor decimal -- ex: 1.05 = 1
+      // Math.random() * weapons.length --> devolve um numero entre 0 e o tamanho do array weapons
+      const strength = Math.random() * 2 + 1.0; //devolve um valor entre 1 e 3;
+      const damage = 0;
+      return {power, weapon, strength, damage};
+    }
   </script> 
 </body>
 
