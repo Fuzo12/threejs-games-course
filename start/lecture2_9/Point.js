@@ -5,4 +5,4 @@ class Point{
   }
 }
 
-export{Point};
+export{Point}; // torna publicos os metodos ou classes
